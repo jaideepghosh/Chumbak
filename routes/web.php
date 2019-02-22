@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'ProductsController@index');
-Route::resource('products', 'ProductsController');
-Route::resource('categories', 'CategoryController');
+Route::get('/', 'ProductsController@index')->middleware('auth');;
+Route::resource('products', 'ProductsController')->middleware('auth');;
+Route::resource('categories', 'CategoryController')->middleware('auth');;
+Auth::routes();
