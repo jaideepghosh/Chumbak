@@ -49,12 +49,13 @@ $(document).ready(function () {
                 "ajax":"<?php echo url('/'); ?>/index.php/api/get/products",
                 "columns": [
                     { "data": "id" },
-                    {
-                        "data": "name",
-                        "fnCreatedCell": function (cell, cellData, rowData, rowIndex, colIndex) {
-                            $(cell).html("<a href='' target='_blank'>"+rowData.name+"</a>");
-                        }
-                    },
+                    { "data": "name" },
+                    // {
+                    //     "data": "name",
+                    //     "fnCreatedCell": function (cell, cellData, rowData, rowIndex, colIndex) {
+                    //         $(cell).html("<a href='' target='_blank'>"+rowData.name+"</a>");
+                    //     }
+                    // },
                     { "data": "price" },
                     {
                         "data": "id",
